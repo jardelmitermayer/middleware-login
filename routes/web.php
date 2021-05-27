@@ -46,3 +46,5 @@ Route::get('/logout', function (Request $request) {
     $request->session()->flush();
     return response('Deslogado com sucesso');
 });
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
